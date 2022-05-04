@@ -7,12 +7,20 @@ Integrantes:
 
 ## Instrucciones de Ejecución
 
-Primeramente es importante verificar si hay puertos utilizados por Postgres o Redis, caso en el cual se deben cerrar.
+Primeramente es importante verificar si hay puertos utilizados por Postgres o Redis, caso en el cual se deben cerrar. Luego:
 
 ```
 sudo docker-compose up -d
 sudo docker-compose up
 ```
+En caso de tener problema con contenedores externos, borrarlos mediante:
+
+```
+sudo docker system prune -a
+```
+
+Si al ingresar el comando `sudo docker-compose up` se ejecuta bien pero no funciona la aplicación, detener servicio y volver a ejecutar.
+
 **Ejemplo de búsqueda:** http://localhost:3000/inventory/search?name=busquedaDeseada
 
 ## Configuración Redis
