@@ -32,5 +32,5 @@ Para esta aplicación se utilizaron los siguientes parámetros:
 - Implementación requiere llevar la cuenta de cantidad de veces que se usa cada elemento
 - Incapacidad de acceder a archivos muy antiguos
 
-Para esta aplicación se utilizó la política LFU debido a que, al ser un sistema de ventas, se requiere mantener en caché las entradas usadas con mayor frecuencia para poder reducir al máximo los recursos utilizados.
+Para esta aplicación se utilizó la política LFU debido a que, al ser un sistema de ventas, se requiere mantener en caché las entradas más populares, es decir, las usadas con mayor frecuencia con el fin de poder reducir al máximo los recursos utilizados.
 
