@@ -7,7 +7,14 @@ Integrantes:
 
 ## Instrucciones de Ejecución
 
-Primeramente es importante verificar si hay puertos utilizados por Postgres o Redis, caso en el cual se deben cerrar. Luego:
+Primeramente es importante verificar si hay puertos utilizados por Postgres o Redis mediante:
+
+```
+sudo lsof -nP -iTCP -sTCP:LISTEN
+```
+En este caso, para detener Postgres se debe ingresar `sudo kill -9 *PID*` y para Redis `sudo systemctl stop redis`
+
+Luego:
 
 ```
 sudo docker-compose up -d
