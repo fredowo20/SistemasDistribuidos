@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+  caching:
+    image: bitnami/redis:6.0.16
+    restart: always
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    command: /opt/bitnami/scripts/redis/run.sh --maxmemory 60mb --maxmemory-policy allkeys-lfu
+    ports:
+      - "6379:6379"
+  backend:
+    build:
+      context: ./cliente
+      dockerfile: Dockerfile
+    restart: always
+    # depends_on:
+    #   - caching
+    environment:
+      - REDIS_HOST=caching
+      - POSTGRES_HOST=postgres
+      - SERVER_HOST=node_example
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./cliente/main.js:/app/index.js
+
+  node_example:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "50051:50051"
+    environment:
+      - POSTGRES_HOST=postgres
+      - SERVER_HOST=node_example
+  postgres:
+      container_name: postgres
+      image: 'bitnami/postgresql:13.6.0'
+      restart: always
+      environment:
+        - POSTGRES_USER=sisdis
+        - POSTGRES_PASSWORD=sispass
+        - POSTGRESQL_DATABASE=sisdb
+      ports:
+        - '5432:5432'
+      volumes: 
+        - ./init.sql:/docker-entrypoint-initdb.d/init.sql
