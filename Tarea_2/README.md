@@ -33,6 +33,10 @@ sudo snap install postman
 
 Con todo lo anterior preparado, se ingresa a Postman, se escoge el método `POST` y se ingresa la url `http://localhost:3000/inventory/search?name=busquedaDeseada`:
 
+`{
+ "user" : "nicolas.nunez2@mail.udp.cl",
+ "pass" : "sistemasdistrbuidosbestramo"
+}`
 
 
 
