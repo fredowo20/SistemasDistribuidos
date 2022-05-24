@@ -44,7 +44,7 @@ Luego, se escoge la pestaña `Body` con la opción `raw` y en la lista desplegab
 
 Finalmente se debería ver de la siguiente manera:
 
-![Postman](https://user-images.githubusercontent.com/103700122/169952128-0c475644-0ec6-4256-9a09-edc658fd068e.png)
+![Postman](https://user-images.githubusercontent.com/103700122/169953179-d402cbb5-7ccb-4000-9978-7fcbfaca166c.png)
 
 Con esto, se podrá presionar `Send` para enviar la solicitud, en donde si se realizan 5 de estas en menos de 1 minuto, la cuenta será bloqueada. Cabe destacar que será posible visualizar los usuarios bloqueados hasta el momento en la siguiente url:
 
