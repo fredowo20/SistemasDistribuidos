@@ -33,22 +33,22 @@ sudo snap install postman
 
 Con todo lo anterior preparado, se ingresa a Postman, se escoge el método `POST` y se ingresa la siguiente url:
 
-`http://localhost:3000/inventory/search?name=busquedaDeseada`
+`http://localhost:3000/login`
 
 Luego, se escoge la pestaña `Body` con la opción `raw` y en la lista desplegable se escoge `JSON`, colocando en el cuadro de texto lo siguiente:
 
 `{
- "user" : "nicolas.nunez2@mail.udp.cl",
+ "user" : "nicolas.hidalgoc@mail.udp.cl",
  "pass" : "sistemasdistrbuidosbestramo"
 }`
 
 Finalmente se debería ver de la siguiente manera:
 
+![Postman](https://user-images.githubusercontent.com/103700122/169952128-0c475644-0ec6-4256-9a09-edc658fd068e.png)
 
+Con esto, se podrá presionar `Send` para enviar la solicitud, en donde si se realizan 5 de estas en menos de 1 minuto, la cuenta será bloqueada. Cabe destacar que será posible visualizar los usuarios bloqueados hasta el momento en la siguiente url:
 
-Si al ingresar el comando `sudo docker-compose up` se ejecuta bien pero no funciona la aplicación, detener servicio y volver a ejecutar.
-
-**Ejemplo de búsqueda:** http://localhost:3000/inventory/search?name=busquedaDeseada
+`http://localhost:5000/blocked`
 
 ## Preguntas
 
