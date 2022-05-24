@@ -32,6 +32,10 @@ Si al ingresar el comando `sudo docker-compose up` se ejecuta bien pero no funci
 
 ## Preguntas
 
-#### aaaa
+#### ¿Por qué Kafka funciona bien en este escenario?
+
+#### Basado en las tecnologías que usted tiene a su disposición (Kafka, backend) ¿Qué haría usted para manejar una gran cantidad de usuarios al mismo tiempo?
+
+
 
 
