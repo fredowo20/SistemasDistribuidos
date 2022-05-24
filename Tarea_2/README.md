@@ -39,7 +39,7 @@ Luego, se escoge la pestaña `Body` con la opción `raw` y en la lista desplegab
 
 `{
  "user" : "nicolas.hidalgoc@mail.udp.cl",
- "pass" : "sistemasdistrbuidosbestramo"
+ "pass" : "sistemasdistribuidosbestramo"
 }`
 
 Finalmente se debería ver de la siguiente manera:
