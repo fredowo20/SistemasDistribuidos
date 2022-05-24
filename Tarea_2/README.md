@@ -1,5 +1,5 @@
 # Sistemas Distribuidos
-Tarea N°1 Sistemas Distribuidos
+Tarea N°2 Sistemas Distribuidos
 
 Integrantes:
 - Freddy Aguilar
