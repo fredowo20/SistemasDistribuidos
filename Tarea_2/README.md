@@ -54,7 +54,7 @@ Si al ingresar el comando `sudo docker-compose up` se ejecuta bien pero no funci
 
 #### ¿Por qué Kafka funciona bien en este escenario?
 
-Kafka funciona bien en este escenario debido a que se necesitan procesar los datos a tiempo real, por lo tanto, utilizar este broker es beneficioso para el objetivo del sistema, pues se tiene un login, en el cual habrá un gran flujo de usuarios logeandose, así que es necesario tener un sistema escalable y Kafka cumple con ello, logrando alivianar la carga para poder gestionar de manera correcta los procesos asociados al sistema
+Kafka funciona bien en este escenario debido a que se necesitan procesar los datos a tiempo real, por lo tanto, utilizar este broker es beneficioso para el objetivo del sistema, pues se tiene un login, en el cual habrá un gran flujo de usuarios logeandose, así que es necesario tener un sistema escalable y Kafka cumple con ello, logrando alivianar la carga para poder gestionar de manera correcta los procesos asociados al sistema.
 
 
 #### Basado en las tecnologías que usted tiene a su disposición (Kafka, backend) ¿Qué haría usted para manejar una gran cantidad de usuarios al mismo tiempo?
