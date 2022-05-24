@@ -52,11 +52,11 @@ Con esto, se podrá presionar `Send` para enviar la solicitud, en donde si se re
 
 ## Preguntas
 
-#### ¿Por qué Kafka funciona bien en este escenario?
+- #### ¿Por qué Kafka funciona bien en este escenario?
 
 Kafka funciona bien en este escenario debido a que se necesitan procesar los datos a tiempo real, por lo tanto, utilizar este broker es beneficioso para el objetivo del sistema, pues se tiene un login, en el cual habrá un gran flujo de usuarios logeandose, así que es necesario tener un sistema escalable y Kafka cumple con ello, logrando alivianar la carga para poder gestionar de manera correcta los procesos asociados al sistema.
 
 
-#### Basado en las tecnologías que usted tiene a su disposición (Kafka, backend) ¿Qué haría usted para manejar una gran cantidad de usuarios al mismo tiempo?
+- #### Basado en las tecnologías que usted tiene a su disposición (Kafka, backend) ¿Qué haría usted para manejar una gran cantidad de usuarios al mismo tiempo?
 
 Para manejar una gran cantidad de datos es necesario que el sistema implementado sea escalable, en este caso Kafka cumple con estos requisitos, pues es un sistema que permite el escalamiento horizontal, por lo tanto, para manejar una gran cantidad de usuarios simultáneamente se utilizarán algunas características propias de Kafka, por ejemplo, agregar más brokers para poder distribuir en cada uno la carga que vendría de una gran cantidad de usuarios, además de crear más particiones en cada uno de estos brokers.
