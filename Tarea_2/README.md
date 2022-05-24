@@ -50,6 +50,10 @@ Con esto, se podrá presionar `Send` para enviar la solicitud, en donde si se re
 
 `http://localhost:5000/blocked`
 
+#### Referencias
+
+Para la elaboración de los códigos realizados se utilizó como base los códigos disponibles en la página de la librería utilizada [kafkajs](https://www.npmjs.com/package/kafkajs/v/1.16.0)
+
 ## Preguntas
 
 - #### ¿Por qué Kafka funciona bien en este escenario?
