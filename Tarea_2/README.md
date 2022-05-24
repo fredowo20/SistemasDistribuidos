@@ -7,12 +7,11 @@ Integrantes:
 
 ## Instrucciones de Ejecución
 
-Primeramente es importante verificar si hay puertos utilizados por Postgres o Redis mediante:
+Primeramente es importante verificar que no estén utilizados los puertos `3000`, `5000`, `9092`, `2181`, `2888` y `3888`, lo cual se puede realizar mediante:
 
 ```
 sudo lsof -nP -iTCP -sTCP:LISTEN
 ```
-En este caso, para detener Postgres se debe ingresar `sudo kill -9 *PID*` y para Redis `sudo systemctl stop redis`
 
 Luego:
 
@@ -25,6 +24,17 @@ En caso de tener problema con contenedores externos, borrarlos mediante:
 ```
 sudo docker system prune -a
 ```
+
+Además, se debe utilizar Postman, el cual se puede instalar mediante:
+
+```
+sudo snap install postman
+```
+
+Con todo lo anterior preparado, se ingresa a Postman, se escoge el método `POST` y se ingresa la url `http://localhost:3000/inventory/search?name=busquedaDeseada`:
+
+
+
 
 Si al ingresar el comando `sudo docker-compose up` se ejecuta bien pero no funciona la aplicación, detener servicio y volver a ejecutar.
 
