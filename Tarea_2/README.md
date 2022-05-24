@@ -31,12 +31,18 @@ Además, se debe utilizar Postman, el cual se puede instalar mediante:
 sudo snap install postman
 ```
 
-Con todo lo anterior preparado, se ingresa a Postman, se escoge el método `POST` y se ingresa la url `http://localhost:3000/inventory/search?name=busquedaDeseada`:
+Con todo lo anterior preparado, se ingresa a Postman, se escoge el método `POST` y se ingresa la siguiente url:
+
+`http://localhost:3000/inventory/search?name=busquedaDeseada`
+
+Luego, se escoge la pestaña `Body` con la opción `raw` y en la lista desplegable se escoge `JSON`, colocando en el cuadro de texto lo siguiente:
 
 `{
  "user" : "nicolas.nunez2@mail.udp.cl",
  "pass" : "sistemasdistrbuidosbestramo"
 }`
+
+Finalmente se debería ver de la siguiente manera:
 
 
 
