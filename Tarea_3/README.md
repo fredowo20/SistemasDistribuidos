@@ -7,7 +7,7 @@ Integrantes:
 
 ## Instrucciones de Ejecución
 
-Primeramente es importante verificar que no estén utilizados los puertos `3000`, `5000`, `9092`, `2181`, `2888` y `3888`, lo cual se puede realizar mediante:
+Primeramente es importante verificar que no esté utilizado el puerto `3000`, lo cual se puede realizar mediante:
 
 ```
 sudo lsof -nP -iTCP -sTCP:LISTEN
@@ -33,26 +33,61 @@ sudo snap install postman
 
 Con todo lo anterior preparado, se ingresa a Postman, se escoge el método `POST` y se ingresa la siguiente url:
 
-`http://localhost:3000/login`
+`http://localhost:3000/create`
 
 Luego, se escoge la pestaña `Body` con la opción `raw` y en la lista desplegable se escoge `JSON`, colocando en el cuadro de texto lo siguiente:
 
 `{
- "user" : "nicolas.hidalgoc@mail.udp.cl",
- "pass" : "sistemasdistribuidosbestramo"
+ "nombre": "Melon",
+ "apellido": "Musk",
+ "rut": "1",
+ "email": "Xmelon_muskX@fruitter.com",
+ "fecha_nacimiento": "28/06/1971",
+ "comentario": "Amigdalitis",
+ "farmacos": "Paracetamol",
+ "doctor": "El Waton de la Fruta"
 }`
 
 Finalmente se debería ver de la siguiente manera:
 
 ![Postman](https://user-images.githubusercontent.com/103700122/169953179-d402cbb5-7ccb-4000-9978-7fcbfaca166c.png)
 
-Con esto, se podrá presionar `Send` para enviar la solicitud, en donde si se realizan 5 de estas en menos de 1 minuto, la cuenta será bloqueada. Cabe destacar que será posible visualizar los usuarios bloqueados hasta el momento en la siguiente url:
+Con esto, se podrá presionar `Send` para enviar la solicitud de creación de receta, en donde será posible visualizar un mensaje indicando lo realizado:
 
-`http://localhost:5000/blocked`
 
-#### Referencias
 
-Para la elaboración de los códigos realizados se utilizó como base los códigos disponibles en la página de la librería utilizada [kafkajs](https://www.npmjs.com/package/kafkajs/v/1.16.0)
+Es importante guardar el ID de la receta indicado para las siguientes acciones.
+
+Después de esto, para editar la receta se ingresa la siguiente url:
+
+`http://localhost:3000/edit`
+
+Luego, se mantiene la configuración anterior, pero colocando en el cuadro de texto lo siguiente: 
+
+`{
+ "id": 1, //Reemplazar por el ID de la receta anteriormente mencionado
+ "comentario": "Amigdalitis aguda",
+ "farmacos": "Paracetamol con aguita",
+ "doctor": "El Waton de la Fruta"
+}`
+
+Con esto, se podrá nuevamente presionar `Send` para enviar la solicitud de edición de receta, en donde será posible visualizar un mensaje indicando lo realizado:
+
+
+
+Finalmente, para eliminar la receta se ingresa la siguiente url:
+
+`http://localhost:3000/delete`
+
+Luego, se mantiene la configuración anterior, pero colocando en el cuadro de texto lo siguiente: 
+
+`{
+ "id": 1, //Reemplazar por el ID de la receta
+}`
+
+Con esto, se podrá una vez más presionar `Send` para enviar la solicitud de edición de receta, en donde será posible visualizar un mensaje indicando lo realizado:
+
+
 
 ## Preguntas
 
