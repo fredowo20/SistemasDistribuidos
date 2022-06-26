@@ -56,11 +56,19 @@ Para la elaboración de los códigos realizados se utilizó como base los códig
 
 ## Preguntas
 
-- #### ¿Por qué Kafka funciona bien en este escenario?
+- #### Explique la arquitectura que Cassandra maneja. Cuando se crea el clúster ¿Cómo los nodos se conectan? ¿Qué
+ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta?
+¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
 
-Kafka funciona bien en este escenario debido a que se necesitan procesar los datos a tiempo real, por lo tanto, utilizar este broker es beneficioso para el objetivo del sistema, pues se tiene un login, en el cual habrá un gran flujo de usuarios logeandose, así que es necesario tener un sistema escalable y Kafka cumple con ello, logrando alivianar la carga para poder gestionar de manera correcta los procesos asociados al sistema.
 
 
-- #### Basado en las tecnologías que usted tiene a su disposición (Kafka, backend) ¿Qué haría usted para manejar una gran cantidad de usuarios al mismo tiempo?
+- #### Cassandra posee principalmente dos estrategias para mantener redundancia en la replicación de datos. ¿Cuáles son
+estos? ¿Cuál es la ventaja de uno sobre otro? ¿Cuál utilizaría usted para el caso actual y por qué? Justifique
+apropiadamente su respuesta.
 
-Para manejar una gran cantidad de datos es necesario que el sistema implementado sea escalable, en este caso Kafka cumple con estos requisitos, pues es un sistema que permite el escalamiento horizontal, por lo tanto, para manejar una gran cantidad de usuarios simultáneamente se utilizarán algunas características propias de Kafka, por ejemplo, agregar más brokers para poder distribuir en cada uno la carga que vendría de una gran cantidad de usuarios, además de crear más particiones en cada uno de estos brokers.
+
+
+- #### Teniendo en cuenta el contexto del problema ¿Usted cree que la solución propuesta es la correcta? ¿Qué ocurre
+cuando se quiere escalar en la solución? ¿Qué mejoras implementaría? Oriente su respuesta hacia el Sharding (la
+replicación/distribución de los datos) y comente una estrategia que podría seguir para ordenar los datos.
+
