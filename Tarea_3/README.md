@@ -105,7 +105,8 @@ Cassandra corresponde a una base de datos NOSQL, la cual funciona sobre una arqu
 
 - #### Cassandra posee principalmente dos estrategias para mantener redundancia en la replicación de datos. ¿Cuáles son estos? ¿Cuál es la ventaja de uno sobre otro? ¿Cuál utilizaría usted para el caso actual y por qué? Justifique apropiadamente su respuesta.
 
-
+Estas estrategias de replicación corresponden a SimpleStrategy y NetworkTopologyStrategy, en donde la primera estrategia SimpleStrategy es usada cuando se tiene solo 1 datacenter, ubicando réplicas en nodos en sentido horario, mientras que la segunda estrategia NetworkTopologyStrategy se utiliza cuando se tienen múltiples datacenter, pudiendo definir cuántas réplicas se ubicarán en los diferentes datacenter. Para sistemas de gran escala se recomienda NetworkTopologyStrategy gracias a que otorga la posibilidad de mantener redundancia sobre diversos datacenter, pero debido a la simplicidad del sistema creado para este caso, conviene la utilización de SimpleStrategy ya que no se necesita más de 1 datacenter.
 
 - #### Teniendo en cuenta el contexto del problema ¿Usted cree que la solución propuesta es la correcta? ¿Qué ocurre cuando se quiere escalar en la solución? ¿Qué mejoras implementaría? Oriente su respuesta hacia el Sharding (la replicación/distribución de los datos) y comente una estrategia que podría seguir para ordenar los datos.
 
+Al ser el contexto la venta de fármacos, en donde se tienen consultas de complejidad menor hacia un número considerable de posibles clientes, Cassandra logra ser altamente eficiente en este sistema, siendo posible en caso de querer escalar agregar más nodos para agregar más réplicas o eventualmente más datacenter y utilizar estrategia NetworkTopologyStrategy para mayor distribución de carga.
